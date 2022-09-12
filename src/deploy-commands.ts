@@ -8,6 +8,9 @@ const guildId = "";
 
 const commands = [
 	new SlashCommandBuilder().setName('ping').setDescription('Check the bot ping'),
+	new SlashCommandBuilder().setName('invite').setDescription('Get the invite link for the bot'),
+	new SlashCommandBuilder().setName('creator').setDescription('Get info about the creator of the bot'),
+	new SlashCommandBuilder().setName('help').setDescription('Get help on how to use the bot'),
 ].map(command => command.toJSON());
 
 const rest = new REST({ version: '10' }).setToken(token);

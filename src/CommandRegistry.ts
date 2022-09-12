@@ -27,6 +27,10 @@ class CommandRegistry {
         const command = this.commands.get(name);
         return command;
     }
+
+    public getCommands(): Collection<string, Command> {
+        return this.commands;
+    }
 }
 
 export default new CommandRegistry();
