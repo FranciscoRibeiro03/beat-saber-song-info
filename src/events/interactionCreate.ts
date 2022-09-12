@@ -9,7 +9,10 @@ export function run(_: Client, interaction: Interaction) {
     const command = CommandRegistry.getCommand(interaction.commandName);
 
     // If the command does not exist, return
-    if (!command) return;
+    if (!command) {
+        interaction.reply({ content: "An error occurred while executing this command.", ephemeral: true });
+        return;
+    }
 
     // Try to run the command
     try {
