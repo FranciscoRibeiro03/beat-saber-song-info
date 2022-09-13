@@ -10,7 +10,7 @@ export function run(_: Client, interaction: Interaction) {
 
     // If the command does not exist, return
     if (!command) {
-        interaction.reply({ content: "An error occurred while executing this command.", ephemeral: true });
+        interaction.reply({ content: "Command not found.", ephemeral: true });
         return;
     }
 
