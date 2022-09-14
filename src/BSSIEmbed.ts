@@ -29,6 +29,7 @@ export default class BSSIEmbed extends EmbedBuilder {
                 { name: "Upvotes", value: map.stats.upvotes.toString(), inline: true },
                 { name: "Downvotes", value: map.stats.downvotes.toString(), inline: true },
                 { name: "Rating", value: (map.stats.score * 100).toString() + "%", inline: true },
+                { name: "Hash", value: `\`${map.versions[0]!.hash}\``, inline: false },
                 { name: "Links", value: `[ZIP Download](${map.versions[0]!.downloadURL}) / [Preview](https://skystudioapps.com/bs-viewer/?id=${map.id})`, inline: true },
                 { name: "Suggested/Required Mods", value: mods.length > 0 ? mods.join(", ") : "None", inline: true },
             )
