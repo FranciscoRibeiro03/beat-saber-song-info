@@ -23,6 +23,9 @@ const commands = [
 	new SlashCommandBuilder().setName('hash').setDescription('Get info about a song on BeatSaver using the song hash')
 		.addStringOption(option => option.setName('hash').setDescription('The song hash').setRequired(true)),
 
+	new SlashCommandBuilder().setName('suggest').setDescription('Suggest a feature for the bot.')
+		.addStringOption(option => option.setName('suggestion').setDescription('The suggestion').setRequired(true)),
+
 ].map(command => command.toJSON());
 
 const rest = new REST({ version: '10' }).setToken(token!);
