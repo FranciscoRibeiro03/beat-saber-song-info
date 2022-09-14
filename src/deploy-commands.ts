@@ -11,6 +11,7 @@ const commands = [
 	new SlashCommandBuilder().setName('invite').setDescription('Get the invite link for the bot'),
 	new SlashCommandBuilder().setName('info').setDescription('Get info about the bot'),
 	new SlashCommandBuilder().setName('help').setDescription('Get help on how to use the bot'),
+	new SlashCommandBuilder().setName('copyright').setDescription('Get the copyright notice for this bot'),
 ].map(command => command.toJSON());
 
 const rest = new REST({ version: '10' }).setToken(token!);
