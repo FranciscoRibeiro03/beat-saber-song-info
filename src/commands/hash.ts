@@ -1,15 +1,10 @@
-import BeatSaverAPI from "beatsaver-api";
+import BeatSaverAPI, { Errors } from "../BeatSaverAPI";
 import type { CommandInteraction } from "discord.js";
 import BSSIEmbed from "../BSSIEmbed";
 import { Command } from "../Command";
 import RateLimitManager from "../RateLimitManager";
 
 export default class HashCommand extends Command {
-    private bsapi = new BeatSaverAPI({
-        AppName: "Beat Saber Song Info",
-        Version: "2.0.0",
-    })
-
     constructor() {
         super("hash", "Get info about a song on BeatSaver using the song hash.");
     }
@@ -24,11 +19,11 @@ export default class HashCommand extends Command {
         let map;
 
         try {
-            map = await this.bsapi.getMapByHash(hash);
+            map = await BeatSaverAPI.getMapByHash(hash);
         } catch(e) {
-            if (e instanceof BeatSaverAPI.Errors.SongNotFoundError) {
+            if (e instanceof Errors.SongNotFoundError) {
                 interaction.reply({ content: "Invalid song hash.", ephemeral: true });
-            } else if (e instanceof BeatSaverAPI.Errors.RateLimitError) {
+            } else if (e instanceof Errors.RateLimitError) {
                 interaction.reply({ content: "Rate limit exceeded. Please try again later.", ephemeral: true });
                 RateLimitManager.rateLimited = true;
                 setTimeout(() => RateLimitManager.rateLimited = false, 10 * 1000);
