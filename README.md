@@ -2,6 +2,10 @@
 
 This is a Discord bot to allow users to get information about Beat Saber songs hosted on the BeatSaver website.
 
+This bot allows you to get information about custom maps hosted on BeatSaver, including the song author and name, the map description, the uploader, the rating for the custom map, the required and/or suggested mods (if any) and some links to download the map to your game, preview the map on your web browser or listen to the song on Spotify, if it is available.
+
+It allows you to search for the song key, hash, or use the search command to find a song using the name and some additional filters.
+
 ## Commands
 
 ### /bsr
