@@ -4,7 +4,7 @@ import { Command } from "../Command";
 
 const copyrightInfo = "All song info and the icon were taken from [BeatSaver](https://beatsaver.com).\n"
                     + "BeatSaver is licensed under the [GNU General Public License v3.0](https://github.com/beatmaps-io/beatsaver-main/blob/master/LICENSE).\n\n"
-                    + "This bot's source code is licensed under the [GNU General Public License v3.0](https://github.com/FranciscoRibeiro03/beat-saber-song-info/blob/master/LICENSE).";
+                    + "This bot's source code is licensed under the [GNU General Public License v3.0](https://github.com/FranciscoRibeiro03/beat-saber-song-info/blob/main/LICENSE).";
 
 export default class CopyrightCommand extends Command {
     constructor() {
