@@ -1,7 +1,12 @@
 import type { Client, Interaction } from "discord.js";
 import CommandRegistry from "../CommandRegistry";
+import SearchResultsInteraction from "../interactions/search-results";
 
 export function run(_: Client, interaction: Interaction) {
+    if (interaction.isSelectMenu() && interaction.customId.startsWith("search-results")) {
+        new SearchResultsInteraction().run(interaction);
+    }
+
     // If the interaction is not a command, return
     if (!interaction.isCommand()) return;
 

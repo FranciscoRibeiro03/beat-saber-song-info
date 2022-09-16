@@ -26,6 +26,23 @@ const commands = [
 	new SlashCommandBuilder().setName('suggest').setDescription('Suggest a feature for the bot.')
 		.addStringOption(option => option.setName('suggestion').setDescription('The suggestion').setRequired(true)),
 
+	new SlashCommandBuilder().setName('search').setDescription('Search for a song on BeatSaver with the specified parameters')
+		.addStringOption(option => option.setName('query').setDescription('The search query'))
+		.addBooleanOption(option => option.setName('ranked').setDescription('Is the map ranked? (don\'t include this to disable this filtering parameter)'))
+		.addBooleanOption(option => option.setName('curated').setDescription('Is the map curated? (don\'t include this to disable this filtering parameter)'))
+		.addBooleanOption(option => option.setName('cinema').setDescription('Does the map suggest Cinema? (don\'t include this to disable this filtering parameter)'))
+		.addBooleanOption(option => option.setName('chroma').setDescription('Does the map suggest/require Chroma? (don\'t include this to disable this filtering parameter)'))
+		.addBooleanOption(option => option.setName('noodle').setDescription('Does the map require Noodle Extensions? (don\'t include this to disable this filtering parameter)'))
+		.addBooleanOption(option => option.setName('mapping').setDescription('Does the map require Mapping Extensions? (don\'t include this to disable this filtering parameter)'))
+		.addStringOption(option => 
+			option.setName('sort').setDescription('The sort order of the results')
+				.addChoices(
+					{ name: 'Latest', value: 'Latest' },
+					{ name: 'Relevance', value: 'Relevance' },
+					{ name: 'Rating', value: 'Rating' },
+				)
+		),
+
 ].map(command => command.toJSON());
 
 const rest = new REST({ version: '10' }).setToken(token!);
