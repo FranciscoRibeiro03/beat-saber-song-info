@@ -77,7 +77,7 @@ If you would like to donate me, I have a [Patreon](https://www.patreon.com/rui20
 
 ## License
 
-This project is licensed under the [GNU General Public License v3.0](https://github.com/FranciscoRibeiro03/beat-saber-song-info/blob/master/LICENSE).
+This project is licensed under the [GNU General Public License v3.0](https://github.com/FranciscoRibeiro03/beat-saber-song-info/blob/main/LICENSE).
 
 ## Contributors
 
