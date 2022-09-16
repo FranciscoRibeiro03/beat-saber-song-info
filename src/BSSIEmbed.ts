@@ -27,9 +27,11 @@ export default class BSSIEmbed extends EmbedBuilder {
 
         if (spotifyLink && spotifyLink.tracks.items.length > 0) links += ` / [Song on Spotify](${spotifyLink.tracks.items[0]?.external_urls.spotify})`;
 
+        const description = map.description.length >= 2048 ? `${map.description.substring(0, 2045)}...` : map.description;
+
         const embed = new BSSIEmbed(botUser, requestedBy)
             .setTitle(map.name)
-            .setDescription(map.description)
+            .setDescription(description)
             .addFields(
                 { name: "Key", value: map.id, inline: true },
                 { name: "Uploader", value: `[${map.uploader.name}](https://beatsaver.com/profile/${map.uploader.id.toString()})`, inline: true },
