@@ -33,7 +33,7 @@ export default class HashCommand extends Command {
             return;
         }
 
-        const embed = BSSIEmbed.getMapEmbed(interaction.client.user!, interaction.user, map);
+        const embed = await BSSIEmbed.getMapEmbed(interaction.client.user!, interaction.user, map);
 
         await interaction.reply({
             embeds: [embed],

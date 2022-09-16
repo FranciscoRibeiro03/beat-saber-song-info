@@ -77,4 +77,4 @@ This project is licensed under the [GNU General Public License v3.0](https://git
 
 ## Contributors
 
-- [Francisco Ribeiro](https://github.com/FranciscoRibeiro03)
+- [rui2015](https://github.com/FranciscoRibeiro03)
