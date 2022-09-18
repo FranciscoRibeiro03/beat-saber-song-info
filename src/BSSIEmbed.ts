@@ -27,7 +27,7 @@ export default class BSSIEmbed extends EmbedBuilder {
 
         if (spotifyLink && spotifyLink.tracks.items.length > 0) links += ` / [Song on Spotify](${spotifyLink.tracks.items[0]?.external_urls.spotify})`;
 
-        const description = map.description.length >= 2048 ? `${map.description.substring(0, 2045)}...` : map.description;
+        const description = map.description.length >= 2048 ? `${map.description.substring(0, 2045)}...` : (map.description || "No description provided.");
 
         const embed = new BSSIEmbed(botUser, requestedBy)
             .setTitle(map.name)
