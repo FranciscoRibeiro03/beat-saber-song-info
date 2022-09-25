@@ -43,6 +43,8 @@ const commands = [
 				)
 		),
 
+	new SlashCommandBuilder().setName('stats').setDescription('Get statistics about the bot'),
+
 ].map(command => command.toJSON());
 
 const rest = new REST({ version: '10' }).setToken(token!);
