@@ -27,7 +27,7 @@ export default class StatsCommand extends Command {
 function millisecondsToDhms(d: number) {
     const dSeconds = Number(d/1000);
     const D = Math.floor(dSeconds / (3600 * 24));
-    const h = Math.floor(dSeconds / 3600);
+    const h = Math.floor(dSeconds % (3600 * 24) / 3600);
     const m = Math.floor(dSeconds % 3600 / 60);
     const s = Math.floor(dSeconds % 3600 % 60);
 

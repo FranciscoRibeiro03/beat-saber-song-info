@@ -1,6 +1,6 @@
 {
   "name": "beat-saber-song-info",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "This is a Discord bot to allow users to get information about Beat Saber songs hosted on the Beat Saber website.",
   "main": "index.js",
   "scripts": {
